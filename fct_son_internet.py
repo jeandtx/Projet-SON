@@ -42,5 +42,3 @@ def son(frequence, temps):
         # lecture en cours
         pass
 
-
-son(500, 3)
