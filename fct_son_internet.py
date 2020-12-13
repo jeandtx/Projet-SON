@@ -37,8 +37,9 @@ def son(frequence, temps):
 
     import pygame
     pygame.mixer.init()
-    pygame.mixer.Sound("son.wav").play()
+    pygame.mixer.Sound("son.wav").play(0, 0, 25)
     while pygame.mixer.get_busy():
         # lecture en cours
         pass
 
+rebig = "jdbnv"
