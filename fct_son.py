@@ -28,6 +28,4 @@ def sound(freq , duration ) :
     # w a i t f o r pl a y b a c k t o f i n i s h b e f o r e e x i t i n g
     play_obj.wait_done( )
 
-
-
-
+sound(300, 1)
