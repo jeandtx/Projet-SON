@@ -6,7 +6,6 @@ partition.close()"""
 
 from fct_son_internet import *
 from fct_son import *
-
 notes = {'DO': 264, 'RE': 297, 'MI': 330, 'FA': 352, 'SOL': 396, 'LA': 440, 'SI': 495, 'Z': 0}
 durations = {'c': 0.125, 'n': 0.25, 'b': 0.5, 'r': 1}
 p = "extend the duration of the previous note by 50 percent"
