@@ -1,0 +1,1 @@
+1. Le p n'est pas prit en compte dans la lecture de la partition
