@@ -7,7 +7,7 @@ def sound(freq , duration ) :
     sample_rate = 44100
     t = np.linspace(0 , duration , int(duration*sample_rate), False)
     # g e n e r a t e s i n e wave tone
-    tone = np.sin(freq*t*(6)*np.pi )
+    tone = np.sin(freq*t*(2)*np.pi )
     # n o rm al i ze t o 24− b i t range
     tone *= 8388607 / np.max(np.abs(tone))
     # c o n v e r t t o 32− b i t da ta
