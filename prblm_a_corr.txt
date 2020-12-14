@@ -1,1 +1,2 @@
 1. Le p n'est pas prit en compte dans la lecture de la partition
+2. La fonction sound ecrit trop de truc dans le run
