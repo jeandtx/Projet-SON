@@ -1,8 +1,12 @@
+# Projet Son: Paul Jouvenceau, Saul Delmotte, Jean Doutriaux
+# Fichier comportant la fonction qui produit les sons
+
 from time import sleep
 import numpy as np
 import simpleaudio as sa
 
 
+# La fonction prend comme argument la frequence de son et sa durée et le joue
 def sound(freq, duration):
     # g e t t im e s t e p s f o r each sample , " d u r a t i o n " i s n o te d u r a t i o n in sec on d s
     sample_rate = 44100
