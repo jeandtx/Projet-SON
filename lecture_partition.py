@@ -15,6 +15,10 @@ def in_dic(string, dic):
 def play(song):
     partition = open("partitions.txt", "r")
     content = partition.readlines()
+    user_partition = open("user_partition.txt")
+    content.append(user_partition.readline())
+    for i in content:
+        print(i)
     song -= 1
     reader = ""
     frequency = 0
