@@ -20,6 +20,7 @@ def play(song):
     frequency = 0
     duration = 0
     for i in range(0, len(content[song])):
+        j = i + 2
         reader += content[song][i]
         if in_dic(reader, notes):
             frequency = notes[reader]
@@ -29,10 +30,10 @@ def play(song):
             reader = ""
         elif reader == " ":
             reader = ""
-        elif reader == "p":
+        if reader == "p":
             duration *= 1.5
             reader = ""
-        elif frequency != 0 and duration != 0:
+        if frequency != 0 and duration != 0 and content[song][j] != "p":
             sound(frequency, duration)
             frequency = 0
             duration = 0

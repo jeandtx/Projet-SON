@@ -1,2 +1,8 @@
-1. Le p n'est pas prit en compte dans la lecture de la partition
-2. La fonction sound ecrit trop de truc dans le run
+ a faire:
+ - Chaque fichier comporte un commentaire global en tête de fichier, avec le nom du projet, les auteurs, le rôle de ce fichier dans le projet
+ - Un commentaire est présent en tête de chaque fonction. Il décrit :
+ - A l’intérieur des fonctions, des commentaires signalent les principales étapes de l’algorithme, et
+expliquent les parties délicates du code.
+ - Les fonctions et variables sont nommées de manière cohérente, par exemple soit tout en anglais,
+soit tout en français avec usage cohérent des majuscules dans les noms, de séparateurs tels que « _ », etc.
+ -
