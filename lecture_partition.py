@@ -13,12 +13,10 @@ def in_dic(string, dic):
 
 
 def play(song):
-    partition = open("partitions.txt", "r")
+    partition = open("/Users/jeandtx/Documents/Projet SONN/partitions.txt", "r")
     content = partition.readlines()
     user_partition = open("user_partition.txt")
     content.append(user_partition.readline())
-    for i in content:
-        print(i)
     song -= 1
     reader = ""
     frequency = 0
@@ -42,3 +40,15 @@ def play(song):
             frequency = 0
             duration = 0
     partition.close()
+
+
+def new_song():
+    partition = open("/Users/jeandtx/Documents/Projet SONN/user_partition.txt", "w")
+    user = input("Insert your new song: ")
+    partition.write(user)
+    play(27)
+
+
+def do():
+    new_song()
+    play(27)
