@@ -16,7 +16,7 @@ def in_dic(string, dic):
 
 
 def inverse(song):
-    partition = open("/Users/saul/Desktop/Projet-SON-master/partitions.txt", "r")
+    partition = open("partitions.txt", "r")
     content = partition.readlines()
     user_partition = open("user_partition.txt")
     content.append(user_partition.readline())
@@ -47,9 +47,13 @@ def inverse(song):
     partition.close()
 
 
+def markov_chaine():
+    var = ""
+
+
 def play_version(n):
     small_window = Tk()
-    small_window.title("Wich version ?")
+    small_window.title("Which version ?")
     small_window.geometry('200x100')
     small_window.config(background='#ABEBC6')
 
@@ -58,4 +62,3 @@ def play_version(n):
     inv = Button(small_window, text="Jouer le morceau inverser", command=partial(inverse, n))
     inv.pack(fill=X)
     small_window.mainloop()
-
