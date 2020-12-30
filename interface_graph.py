@@ -4,6 +4,7 @@
 from tkinter import *
 from lecture_partition import *
 from functools import partial
+from fct_choose_version import *
 
 
 def function():
@@ -32,39 +33,39 @@ droite = Frame(morceaux, bg='#ABEBC6')
 
 # boutons
 joyeux_anniversaire = Button(gauche, text="Joyeux anniversaire", font=('', 20), bg='#ABEBC6', fg='#145A32',
-                             command=partial(play, 2))
+                             command=partial(play_version, 2))
 joyeux_anniversaire.pack(fill=X, pady=10)
 au_clair_de_la_lune = Button(gauche, text="Au clair de la lune", font=('', 20), bg='#ABEBC6', fg='#145A32',
-                             command=partial(play, 4))
+                             command=partial(play_version, 4))
 au_clair_de_la_lune.pack(fill=X, pady=10)
-vive_le_vent = Button(gauche, text="Vive le vent", font=('', 20), bg='#ABEBC6', fg='#145A32', command=partial(play, 6))
+vive_le_vent = Button(gauche, text="Vive le vent", font=('', 20), bg='#ABEBC6', fg='#145A32', command=partial(play_version, 6))
 vive_le_vent.pack(fill=X, pady=10)
 frere_jacques = Button(gauche, text="Frères Jacques", font=('', 20), bg='#ABEBC6', fg='#145A32',
-                       command=partial(play, 8))
+                       command=partial(play_version, 8))
 frere_jacques.pack(fill=X, pady=10)
 la_claire_fontaine = Button(gauche, text="À la claire fontaine", font=('', 20), bg='#ABEBC6', fg='#145A32',
-                            command=partial(play, 10))
+                            command=partial(play_version, 10))
 la_claire_fontaine.pack(fill=X, pady=10)
 au_feu_les_pompiers = Button(gauche, text="Au feu les pompiers", font=('', 20), bg='#ABEBC6', fg='#145A32',
-                             command=partial(play, 12))
+                             command=partial(play_version, 12))
 au_feu_les_pompiers.pack(fill=X, pady=10)
 fais_dodo = Button(droite, text="Fait dodo cola mon p'tit frère", font=('', 20), bg='#ABEBC6', fg='#145A32',
-                   command=partial(play, 14))
+                   command=partial(play_version, 14))
 fais_dodo.pack(fill=X, pady=10)
 une_souris_vert = Button(droite, text="Une souris verte", font=('', 20), bg='#ABEBC6', fg='#145A32',
-                         command=partial(play, 16))
+                         command=partial(play_version, 16))
 une_souris_vert.pack(fill=X, pady=10)
 a_vous_dirais_je_maman = Button(droite, text="À vous dirais-je Maman", font=('', 20), bg='#ABEBC6', fg='#145A32',
-                                command=partial(play, 18))
+                                command=partial(play_version, 18))
 a_vous_dirais_je_maman.pack(fill=X, pady=10)
 le_bon_roi = Button(droite, text="Le bon roi Dagobert", font=('', 20), bg='#ABEBC6', fg='#145A32',
-                    command=partial(play, 20))
+                    command=partial(play_version, 20))
 le_bon_roi.pack(fill=X, pady=10)
 bateau_sur_eau = Button(droite, text="Bâteau sur l'eau", font=('', 20), bg='#ABEBC6', fg='#145A32',
-                        command=partial(play, 22))
+                        command=partial(play_version, 22))
 bateau_sur_eau.pack(fill=X, pady=10)
 la_mere_michel = Button(droite, text="C'est la mère Michel", font=('', 20), bg='#ABEBC6', fg='#145A32',
-                        command=partial(play, 24))
+                        command=partial(play_version, 24))
 la_mere_michel.pack(fill=X, pady=10)
 
 # image
