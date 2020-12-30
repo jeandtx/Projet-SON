@@ -1,4 +1,3 @@
-from fct_son import *
 from tkinter import *
 from functools import partial
 from lecture_partition import *

@@ -1,9 +1,6 @@
 # Projet Son: Paul Jouvenceau, Saul Delmotte, Jean Doutriaux
 # Le fichier comporte l'interface graphique
 
-from tkinter import *
-from lecture_partition import *
-from functools import partial
 from fct_choose_version import *
 
 

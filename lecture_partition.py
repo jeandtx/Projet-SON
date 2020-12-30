@@ -7,12 +7,14 @@ notes = {'DO': 264, 'RE': 297, 'MI': 330, 'FA': 352, 'SOL': 396, 'LA': 440, 'SI'
 durations = {'c': 0.125, 'n': 0.25, 'b': 0.5, 'r': 1}
 p = "extend the duration of the previous note by 50 percent"
 
+
 # cette fonction sert a verifier si un element est dans un dictionnaire
 def in_dic(string, dic):
     for k in dic:
         if k == string:
             return True
     return False
+
 
 # Cette fonction sert à lire la partition et la jouer
 def play(song):
@@ -46,12 +48,14 @@ def play(song):
             duration = 0
     partition.close()
 
+
 # Cette fonction ajoute une nouvelle melodie à la partition
 def new_song():
     partition = open("/Users/jeandtx/Documents/Projet SONN/user_partition.txt", "w")
     user = input("Insert your new song: ")
     partition.write(user)
     play(27)
+
 
 # Cette fonction sert à executer deux fonctions au lieu d'une quand on appuie sur un bouton de l'interface graph
 def do():
