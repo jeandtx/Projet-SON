@@ -1,15 +1,7 @@
 # Projet Son: Paul Jouvanceau, Saul Delmotte, Jean Doutriaux
-# Le fichier comporte l'interface graphique
+"""Le fichier comporte l'interface graphique"""
 
 from fct_choose_version import *
-
-
-def function():
-    print("work")
-
-
-# remplacer la fonction par le script de lecture partition en le mettant en fonction
-
 
 # parameters window
 window = Tk()
