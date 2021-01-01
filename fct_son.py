@@ -14,7 +14,8 @@ def sound(freq, duration):
     # g e n e r a t e s i n e wave tone
     tone = np.sin(freq * t * 2 * np.pi)
     # n o rm al i ze t o 24− b i t range
-    tone *= 8388607 / np.max(np.abs(tone))
+    if freq != 0:
+        tone *= 8388607 / np.max(np.abs(tone))
     # c o n v e r t t o 32− b i t da ta
     tone = tone.astype(np.int32)
     # c o n v e r t from 32− b i t t o 24− b i t by b u i l d i n g a new b y t e b u f f e r ,
