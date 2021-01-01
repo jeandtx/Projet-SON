@@ -1,4 +1,4 @@
-# Projet Son: Paul Jouvenceau, Saul Delmotte, Jean Doutriaux
+# Projet Son: Paul Jouvanceau, Saul Delmotte, Jean Doutriaux
 # Le fichier comporte l'interface graphique
 
 from fct_choose_version import *

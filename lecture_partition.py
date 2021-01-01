@@ -28,6 +28,31 @@ def play(song):
         sound(frequency, duration)
     partition.close()
 
+# Cette fonction sert à lire la partition et la jouer en reverse
+def inverse(song):
+    partition = open("partitions.txt", "r")
+    content = partition.readlines()
+    user_partition = open("user_partition.txt")
+    content.append(user_partition.readline())
+    song -= 1
+    song_notes = content[song].split()
+    song_notes.reverse()
+    p_tag = False
+    for note_tag in song_notes:
+        if note_tag == 'p':
+            p_tag = True
+            continue
+        note = note_tag[:-1]
+        dtag = note_tag[-1]
+        frequency = frequencies[note]
+        duration = durations[dtag]
+        if p_tag:
+            duration *= 1.5
+            p_tag = False
+        print(note_tag, frequency, duration)
+        sound(frequency, duration)
+    partition.close()
+
 
 # Cette fonction ajoute une nouvelle melodie à la partition
 def new_song():

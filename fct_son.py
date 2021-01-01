@@ -1,4 +1,4 @@
-# Projet Son: Paul Jouvenceau, Saul Delmotte, Jean Doutriaux
+# Projet Son: Paul Jouvanceau, Saul Delmotte, Jean Doutriaux
 # Fichier comportant la fonction qui produit les sons
 
 from time import sleep
