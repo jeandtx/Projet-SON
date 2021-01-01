@@ -6,14 +6,21 @@ from fct_son import *
 frequencies = {'DO': 264, 'RE': 297, 'MI': 330, 'FA': 352, 'SOL': 396, 'LA': 440, 'SI': 495, 'Z': 0}
 durations = {'c': 0.125, 'n': 0.25, 'b': 0.5, 'r': 1}
 
-# Cette fonction sert à lire la partition et la jouer
-def play(song):
+
+def read_partition(song):
     partition = open("partitions.txt", "r")
     content = partition.readlines()
-    user_partition = open("user_partition.txt")
-    content.append(user_partition.readline())
+    partition.close()
+    partition = open("user_partition.txt")
+    content += partition.readlines()
+    partition.close()
     song -= 1
-    song_notes = content[song].split()
+    return content[song].split()
+
+
+# Cette fonction sert à lire la partition et la jouer
+def play(song):
+    song_notes = read_partition(song)
     for i in range(len(song_notes)):
         if song_notes[i] == 'p':
             continue
@@ -26,16 +33,11 @@ def play(song):
             duration *= 1.5
         # to debug: print(song_notes[j], frequency, duration)
         sound(frequency, duration)
-    partition.close()
+
 
 # Cette fonction sert à lire la partition et la jouer en reverse
 def inverse(song):
-    partition = open("partitions.txt", "r")
-    content = partition.readlines()
-    user_partition = open("user_partition.txt")
-    content.append(user_partition.readline())
-    song -= 1
-    song_notes = content[song].split()
+    song_notes = read_partition(song)
     song_notes.reverse()
     p_tag = False
     for note_tag in song_notes:
@@ -51,7 +53,6 @@ def inverse(song):
             p_tag = False
         print(note_tag, frequency, duration)
         sound(frequency, duration)
-    partition.close()
 
 
 # Cette fonction ajoute une nouvelle melodie à la partition
