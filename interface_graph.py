@@ -80,7 +80,7 @@ droite.pack(side=RIGHT)
 # dernier bouton pour creer un morceau
 bas = Frame(window, bg='#ABEBC6')
 nvx_morceau = Button(bas, text="Créer une nouvelle partition", font=('', 15), bg='#ABEBC6', fg='#145A32',
-                     command=do)
+                     command=new_song)
 nvx_morceau.pack(fill=X)
 bas.pack(expand=YES)
 

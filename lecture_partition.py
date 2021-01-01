@@ -60,10 +60,6 @@ def new_song():
     partition = open("user_partition.txt", "w")
     user = input("Insert your new song: ")
     partition.write(user)
+    partition.close()
     play(27)
 
-
-# Cette fonction sert à executer deux fonctions au lieu d'une quand on appuie sur un bouton de l'interface graph
-def do():
-    new_song()
-    play(27)
