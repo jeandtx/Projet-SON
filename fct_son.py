@@ -28,7 +28,6 @@ def sound(freq, duration):
             byte_array.append(b)
         i += 1
     audio = bytearray(byte_array)
-    print(audio)
     # start playback
     play_obj = sa.play_buffer(audio, 1, 3, sample_rate)
     # wait for playback to finish before exiting

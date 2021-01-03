@@ -23,7 +23,7 @@ def read_partition(song):
 def play(song):
     """Cette fonction sert à lire la partition et la jouer"""
     song_notes = read_partition(song)
-    for i,note_tag in enumerate(song_notes):
+    for i, note_tag in enumerate(song_notes):
         if note_tag == 'p':
             continue
         note = note_tag[:-1]
@@ -36,7 +36,7 @@ def play(song):
         j = i + 1
         if j < len(song_notes) and song_notes[j] == "p":
             duration *= 1.5
-        # to debug: print(note_tag, frequency, duration)
+        print(note_tag, frequency, duration)
         sound(frequency, duration)
 
 
@@ -76,6 +76,7 @@ def new_song():
     text.pack(expand=YES)
 
     def getTextInput():
+        """Cette fonction récupere l'input du texte en appuyant sur un bouton"""
         result = text.get("1.0", "end")
         partition = open("user_partition.txt", "w")
         partition.write(result)

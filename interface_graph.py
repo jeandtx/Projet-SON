@@ -3,7 +3,7 @@
 
 from fct_choose_version import *
 
-# parameters window
+# parametres de la fenetre
 window = Tk()
 window.title("Projet Son")
 window.geometry('1080x750')
@@ -27,7 +27,8 @@ joyeux_anniversaire.pack(fill=X, pady=10)
 au_clair_de_la_lune = Button(gauche, text="Au clair de la lune", font=('', 20), bg='#ABEBC6', fg='#145A32',
                              command=partial(play_version, 4))
 au_clair_de_la_lune.pack(fill=X, pady=10)
-vive_le_vent = Button(gauche, text="Vive le vent", font=('', 20), bg='#ABEBC6', fg='#145A32', command=partial(play_version, 6))
+vive_le_vent = Button(gauche, text="Vive le vent", font=('', 20), bg='#ABEBC6', fg='#145A32',
+                      command=partial(play_version, 6))
 vive_le_vent.pack(fill=X, pady=10)
 frere_jacques = Button(gauche, text="Frères Jacques", font=('', 20), bg='#ABEBC6', fg='#145A32',
                        command=partial(play_version, 8))
@@ -69,15 +70,15 @@ gauche.pack(side=LEFT)
 canvas.pack(side=LEFT)
 droite.pack(side=RIGHT)
 
-# dernier bouton pour creer un morceau
+# derniers boutons pour creer un morceau et pour quitter l'interface
 bas = Frame(window, bg='#ABEBC6')
 nvx_morceau = Button(bas, text="Créer une nouvelle partition", font=('', 15), bg='#ABEBC6', fg='#145A32',
                      command=new_song)
 nvx_morceau.pack(fill=X)
 bas.pack(expand=YES)
 
-leave = Button(window, text="Leave the program", font=('', 15), bg='#ABEBC6', fg='#145A32', command=quit)
+leave = Button(window, text="Quitter", font=('', 15), bg='#ABEBC6', fg='#145A32', command=quit)
 leave.pack()
 
-# display window
+# afficher la fenetre
 window.mainloop()
