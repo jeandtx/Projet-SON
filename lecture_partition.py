@@ -65,7 +65,6 @@ def inverse(song):
 
 def new_song():
     """Cette fonction ajoute une nouvelle melodie à la partition"""
-    partition = open("user_partition.txt", "w")
     instructions = Tk()
     instructions.title("Create your partition")
     instructions.geometry("600x300")
@@ -78,10 +77,12 @@ def new_song():
 
     def getTextInput():
         result = text.get("1.0", "end")
+        partition = open("user_partition.txt", "w")
         partition.write(result)
+        partition.close()
+        play(27)
         instructions.destroy()
 
     enter = Button(instructions, text="Enter", command=getTextInput)
     enter.pack(expand=YES)
     instructions.mainloop()
-    play(27)
