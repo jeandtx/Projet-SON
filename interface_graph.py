@@ -1,15 +1,7 @@
-# Projet Son: Paul Jouvenceau, Saul Delmotte, Jean Doutriaux
-# Le fichier comporte l'interface graphique
+# Projet Son: Paul Jouvanceau, Saul Delmotte, Jean Doutriaux
+"""Le fichier comporte l'interface graphique"""
 
 from fct_choose_version import *
-
-
-def function():
-    print("work")
-
-
-# remplacer la fonction par le script de lecture partition en le mettant en fonction
-
 
 # parameters window
 window = Tk()
@@ -80,7 +72,7 @@ droite.pack(side=RIGHT)
 # dernier bouton pour creer un morceau
 bas = Frame(window, bg='#ABEBC6')
 nvx_morceau = Button(bas, text="Créer une nouvelle partition", font=('', 15), bg='#ABEBC6', fg='#145A32',
-                     command=do)
+                     command=new_song)
 nvx_morceau.pack(fill=X)
 bas.pack(expand=YES)
 
