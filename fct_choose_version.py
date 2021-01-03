@@ -13,6 +13,6 @@ def play_version(n):
 
     nrml = Button(small_window, text="Jouer le morceau normalement", command=partial(play, n))
     nrml.pack()
-    inv = Button(small_window, text="Jouer le morceau inverser", command=partial(inverse, n))
+    inv = Button(small_window, text="Jouer le morceau inversé", command=partial(inverse, n))
     inv.pack(fill=X)
     small_window.mainloop()
