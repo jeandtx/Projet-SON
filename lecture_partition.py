@@ -28,6 +28,9 @@ def play(song):
             continue
         note = note_tag[:-1]
         dtag = note_tag[-1]
+        if note not in frequencies or dtag not in durations:
+            print("Attention la note %s est invalide", note_tag)
+            continue
         frequency = frequencies[note]
         duration = durations[dtag]
         j = i + 1
@@ -48,6 +51,9 @@ def inverse(song):
             continue
         note = note_tag[:-1]
         dtag = note_tag[-1]
+        if note not in frequencies or dtag not in durations:
+            print("Attention la note %s est invalide", note_tag)
+            continue
         frequency = frequencies[note]
         duration = durations[dtag]
         if p_tag:
