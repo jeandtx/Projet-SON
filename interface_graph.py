@@ -76,5 +76,8 @@ nvx_morceau = Button(bas, text="Créer une nouvelle partition", font=('', 15), b
 nvx_morceau.pack(fill=X)
 bas.pack(expand=YES)
 
+leave = Button(window, text="Leave the program", font=('', 15), bg='#ABEBC6', fg='#145A32', command=quit)
+leave.pack()
+
 # display window
 window.mainloop()
